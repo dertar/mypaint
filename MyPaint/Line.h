@@ -1,10 +1,6 @@
 #pragma once
 #include "Shape.h"
 
-/*
-	The entity of line
-*/
-
 class Line :
 	public Shape
 {

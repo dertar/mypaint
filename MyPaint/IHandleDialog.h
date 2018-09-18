@@ -1,6 +1,6 @@
 #pragma once
 /*
-	Wrapper interface for WinApi Dialogs
+	The interface wrapper for WinApi Dialogs
 */
 class IHandleDialog
 {

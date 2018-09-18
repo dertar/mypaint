@@ -1,8 +1,5 @@
 #pragma once
 #include "Shape.h"
-/*
-	The entity of rect
-*/
 
 class MyRectangle :
 	public Shape

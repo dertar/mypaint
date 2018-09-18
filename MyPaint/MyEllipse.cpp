@@ -22,7 +22,7 @@ MyEllipse::~MyEllipse()
 void MyEllipse::draw(const HDC & hdc) const
 {
 	HBRUSH hBrush = CreateSolidBrush(this->rgb);
-	HPEN hPen = CreatePen(PS_SOLID, thickness, RGB(0, 0, 0));
+	HPEN hPen = CreatePen(PS_SOLID, this->thickness, RGB(0, 0, 0));
 
 	SelectObject(hdc, hBrush);
 	SelectObject(hdc, hPen);

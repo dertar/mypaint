@@ -44,7 +44,7 @@ BOOL ToolbarPanel::init()
 	SendMessage(this->hWnd, TB_BUTTONSTRUCTSIZE, (WPARAM)sizeof(TBBUTTON), 0);
 	SendMessage(this->hWnd, TB_SETIMAGELIST, (WPARAM)0, (LPARAM)this->g_hImageList);
 
-	// adjusting the correct icos for buttons
+	// adjusting the correct icons for buttons
 	this->buttons[0].iBitmap = 0;
 	this->buttons[1].iBitmap = 1;
 	this->buttons[2].iBitmap = 2;
@@ -63,9 +63,10 @@ BOOL ToolbarPanel::init()
 		return FALSE;
 	}
 
-
 	SendMessage(this->hWnd, TB_ADDBUTTONS, BUTTONS, (LPARAM)&(this->buttons) );
 	SendMessage(this->hWnd, TB_SETBITMAPSIZE, (WPARAM)0, (LPARAM)MAKELONG(ICON_SIZE, ICON_SIZE));
+
+	return TRUE;
 }
 
 BOOL ToolbarPanel::show()

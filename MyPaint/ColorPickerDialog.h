@@ -11,7 +11,7 @@ class ColorPickerDialog :
 private:
 	COLORREF acrCustClr[16];
 	CHOOSECOLOR color;
-	HIMAGELIST g_hImageList;
+	HIMAGELIST g_hImageList = NULL;
 	HWND owner;
 	Canvas *canvas;
 
@@ -23,6 +23,8 @@ public:
 
 
 	virtual BOOL init() override;
+	// if user picked a Color,
+	// that Color will be changed in Canvas entity also
 	virtual BOOL show() override;
 };
 

@@ -2,9 +2,9 @@
 #include "IDrawable.h"
 #include "ShapeEntity.h"
 #include "Shape.h"
-#include "ShapeFabric.h"
+#include "ShapeFactory.h"
 /*
-	Handle the drawing process
+	Handles the drawing process
 */
 class Canvas :
 	public IDrawable,
@@ -22,7 +22,7 @@ private:
 	BOOL isPending;
 	EShape type;
 
-	ShapeFabric *fabric;
+	ShapeFactory *fabric;
 
 	// recration a new pending shape, 
 	// that needs because the old pending shape would stored in pended data.

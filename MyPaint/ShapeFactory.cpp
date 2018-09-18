@@ -1,26 +1,26 @@
 #include "stdafx.h"
-#include "ShapeFabric.h"
+#include "ShapeFactory.h"
 
 
-ShapeFabric::ShapeFabric()
+ShapeFactory::ShapeFactory()
 {
 }
 
 
-ShapeFabric::~ShapeFabric()
+ShapeFactory::~ShapeFactory()
 {
 	delete this->instance;
 }
 
-ShapeFabric * ShapeFabric::getIntance()
+ShapeFactory * ShapeFactory::getIntance()
 {
 	if (instance == NULL)
-		instance = new ShapeFabric();
+		instance = new ShapeFactory();
 
 	return instance;
 }
 
-Shape * ShapeFabric::create(ShapeEntity *entity, EShape type)
+Shape * ShapeFactory::create(ShapeEntity *entity, EShape type)
 {
 	if (type == EShape::LINE)
 		return new Line(entity);
@@ -32,12 +32,12 @@ Shape * ShapeFabric::create(ShapeEntity *entity, EShape type)
 	return nullptr;
 }
 
-Shape * ShapeFabric::create(EShape type)
+Shape * ShapeFactory::create(EShape type)
 {
 	return this->create(NULL, type);
 }
 
-std::shared_ptr<Shape> ShapeFabric::createShared(ShapeEntity *entity, EShape type)
+std::shared_ptr<Shape> ShapeFactory::createShared(ShapeEntity *entity, EShape type)
 {
 	if (type == EShape::LINE)
 		return std::make_shared<Line>(this->create(entity, type));
@@ -48,9 +48,9 @@ std::shared_ptr<Shape> ShapeFabric::createShared(ShapeEntity *entity, EShape typ
 
 	return nullptr;
 }
-std::shared_ptr<Shape> ShapeFabric::createShared(EShape type)
+std::shared_ptr<Shape> ShapeFactory::createShared(EShape type)
 {
 	return this->createShared(NULL, type);
 }
 
-ShapeFabric* ShapeFabric::instance = NULL;
+ShapeFactory* ShapeFactory::instance = NULL;

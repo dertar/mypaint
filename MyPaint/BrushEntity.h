@@ -1,7 +1,7 @@
 #pragma once
 
 /*
-	Stores color and thickness of brush
+	Stores RGB color and thickness of brush
 */
 
 class BrushEntity

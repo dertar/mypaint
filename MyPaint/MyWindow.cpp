@@ -93,7 +93,7 @@ ATOM MyWindow::myRegisterClass()
 	wcex.hCursor = LoadCursor(nullptr, IDC_CROSS);
 	wcex.hbrBackground = (HBRUSH)(COLOR_WINDOW + 1);
 	wcex.lpszMenuName = MAKEINTRESOURCEW(IDC_MYPAINT);
-	wcex.lpszClassName = L"classMyPaint";
+	wcex.lpszClassName = NAME_CLASS;
 	wcex.hIconSm = LoadIcon(wcex.hInstance, MAKEINTRESOURCE(IDI_SMALL));
 
 	return RegisterClassExW(&wcex);

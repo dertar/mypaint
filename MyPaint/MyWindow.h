@@ -7,7 +7,7 @@
 #include "ColorPickerDialog.h"
 
 /*
-	Create a window that handle all HWNDs, HINSTANCE, Canvas.
+	Creates a window that handles HWNDs, HINSTANCE, Canvas.
 */
 
 class MyWindow :
@@ -28,7 +28,7 @@ private:
 	 
 	ATOM myRegisterClass();
 
-	//get current point from mouse 
+	// get current point from current position of mouse 
 	void getCurrentPoint(POINT &point, LPARAM lParam);
 
 	LRESULT CALLBACK    MyWndProc(HWND, UINT, WPARAM, LPARAM);

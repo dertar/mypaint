@@ -1,8 +1,11 @@
 #pragma once
 #include "HWNDHandler.h"
+#include "MyPaint.h"
+
 /*
 	Wrapper for WinApi HWND
 */
+
 class MainDialog :
 	public HWNDHandler
 {

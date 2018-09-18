@@ -4,7 +4,7 @@
 #include "MyRectangle.h"
 #include "MyEllipse.h"
 /*
-	Types of shape
+	Type of shape
 */
 enum class EShape
 {
@@ -13,23 +13,23 @@ enum class EShape
 	ELLIPSE
 };
 /*
-	Fabric that produce shapes
+	The factory class that produces Shape entities
 */
-class ShapeFabric
+class ShapeFactory
 {
 private:
-	ShapeFabric();
-	~ShapeFabric();
+	ShapeFactory();
+	~ShapeFactory();
 
-	// Singleton definetion
-	static ShapeFabric* instance;
-	ShapeFabric(ShapeFabric const&) = delete;
-	ShapeFabric& operator=(ShapeFabric const&) = delete;
+	// Singleton definition
+	static ShapeFactory* instance;
+	ShapeFactory(ShapeFactory const&) = delete;
+	ShapeFactory& operator=(ShapeFactory const&) = delete;
 	//
 
 public:
 	
-	static ShapeFabric* getIntance();
+	static ShapeFactory* getIntance();
 	
 	Shape* create(ShapeEntity *entity, EShape type);
 	Shape* create(EShape type);

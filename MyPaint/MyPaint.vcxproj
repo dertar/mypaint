@@ -163,7 +163,7 @@
     <ClInclude Include="Resource.h" />
     <ClInclude Include="Shape.h" />
     <ClInclude Include="ShapeEntity.h" />
-    <ClInclude Include="ShapeFabric.h" />
+    <ClInclude Include="ShapeFactory.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
     <ClInclude Include="ToolbarPanel.h" />
@@ -181,7 +181,7 @@
     <ClCompile Include="MyWindow.cpp" />
     <ClCompile Include="Shape.cpp" />
     <ClCompile Include="ShapeEntity.cpp" />
-    <ClCompile Include="ShapeFabric.cpp" />
+    <ClCompile Include="ShapeFactory.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
@@ -189,9 +189,6 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="ToolbarPanel.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ResourceCompile Include="MyPaint.rc" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="backward.ico" />
@@ -207,6 +204,9 @@
     <Image Include="plus.ico" />
     <Image Include="rect.ico" />
     <Image Include="small.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="MyPaint.rc" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

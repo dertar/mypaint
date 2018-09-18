@@ -5,7 +5,7 @@
 #include "BrushEntity.h"
 
 /*
-	The enity of shape that stores:
+	The entity of Shape that stores:
 		how to draw the shape,
 		how to save the shape,
 		POINTS,

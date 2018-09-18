@@ -11,7 +11,7 @@ void Canvas::reconstructShape()
 
 Canvas::Canvas()
 {
-	this->fabric = ShapeFabric::getIntance();
+	this->fabric = ShapeFactory::getIntance();
 
 	this->isPending = false;
 	this->type = EShape::LINE;

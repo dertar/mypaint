@@ -9,10 +9,10 @@ class HWNDHandler :
 	public IHandleDialog
 {
 protected:
-	HINSTANCE hInst;
-	HWND hWnd;
-	HWND parent;
-	int nCmdShow;
+	HINSTANCE hInst = NULL;
+	HWND hWnd = NULL;
+	HWND parent = NULL;
+	int nCmdShow = SW_SHOW;
 
 public:
 	HWNDHandler(HINSTANCE hInst, HWND parent = NULL, const int nCmdShow = SW_SHOW);

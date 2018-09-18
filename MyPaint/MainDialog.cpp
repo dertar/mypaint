@@ -15,8 +15,8 @@ MainDialog::~MainDialog()
 
 BOOL MainDialog::init()
 {
-	this->hWnd = CreateWindowW( L"classMyPaint",
-								L"MyPaint",
+	this->hWnd = CreateWindowW( NAME_CLASS,
+								NAME_WINDOW,
 								WS_OVERLAPPEDWINDOW,
 								CW_USEDEFAULT,
 								0,

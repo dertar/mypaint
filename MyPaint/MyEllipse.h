@@ -1,8 +1,5 @@
 #pragma once
 #include "Shape.h"
-/*
-	The entity of ellipse
-*/
 
 class MyEllipse :
 	public Shape
