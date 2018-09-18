@@ -169,8 +169,17 @@ LRESULT CALLBACK MyWindow::MyWndProc(HWND hWnd, UINT message, WPARAM wParam, LPA
 		PostQuitMessage(0);
 		break;
 	case WM_LBUTTONDOWN:
-		this->getCurrentPoint(this->canvas->getDownMousePos(), lParam);
-		this->canvas->setPending(true);
+		// if user left the window and back again
+		if (this->canvas->getPending())
+		{
+			this->getCurrentPoint(this->canvas->getUpMousePos(), lParam);
+			InvalidateRect(hWnd, NULL, TRUE);
+		}
+		else {
+			this->getCurrentPoint(this->canvas->getDownMousePos(), lParam);
+			this->canvas->setPending(true);
+		}
+
 		break;
 	case WM_LBUTTONUP:
 		this->canvas->setPending(false);
